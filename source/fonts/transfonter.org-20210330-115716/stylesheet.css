@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'GT Alpina Beta v6';
+    src: url('GTAlpinaBetav6-Regular.woff2') format('woff2'),
+        url('GTAlpinaBetav6-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GT Alpina Beta v6';
+    src: url('GTAlpinaBetav6-Thin.woff2') format('woff2'),
+        url('GTAlpinaBetav6-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GT Alpina Beta v6';
+    src: url('GTAlpinaBetav6-ThinItalic.woff2') format('woff2'),
+        url('GTAlpinaBetav6-ThinItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+

@@ -1,0 +1,27 @@
+@import "config/colors";
+@import "config/font_settings";
+@import "components/card";
+
+body {
+  background-color: $primary;
+  color: white;
+  font-family: serif;
+  padding: 40px;
+}
+
+a {
+  color: rgba(#000, 0.7);
+
+  &:focus,
+  &:hover {
+    color: rgba(#000, 0.6);
+  }
+}
+
+.intro {
+  max-width: 776px;
+}
+
+hr {
+  opacity: 1;
+}
