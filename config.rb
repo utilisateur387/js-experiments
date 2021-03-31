@@ -46,3 +46,4 @@ page '/*.txt', layout: false
 # end
 
 activate :livereload
+activate :directory_indexes

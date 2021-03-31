@@ -17,7 +17,7 @@ title: JS30
   </h1>
 
   <div class="intro mb-3">
-    <h3 class="mb-5">Hi and welcome to my 30 days of JS diary. I will be sharing my progression in order to stay accountable to my goals of self-learning.
+    <h3 class="mb-5">Hi and welcome to my <i>30 days of JS</i> diary. I'll be sharing my experiments in order to stay accountable to my goals of self-learning.
     Enjoy your visit!</h3>
 
     <p><i>Based on 30 day Vanilla Coding Challenge by Wes Bos</i></p>
@@ -25,24 +25,27 @@ title: JS30
 
   <hr class="mt-5">
 </div>
+
 <!--
 <%= link_to(
   "Read Documentation",
-  "https://middlemanapp.com/basics/templating_language/",
-  target: "_blank"
+  "challenges/01/index.html"
 ) %> -->
 
 <% days = ["Day 1: JS Drum Kit", "Day 2: JS and CSS Clock"] %>
 
 <div class="row mt-5">
-  <% days.each do |day| %>
+  <% days.each_with_index do |day, index| %>
     <div class="col-xs-12 col-md-6 col-lg-4">
-      <h4><%= day %></h4>
-      <div class="my-card">
-      </div>
+      <% link_to "challenges/0#{index + 1}/index.html" do %>
+        <h4><%= day %></h4>
+        <div class="my-card">
+        </div>
+      <% end %>
     </div>
   <% end %>
 </div>
+
 <!-- <div class="row">
   <div class="col-xs-12 col-md-6 col-lg-4">
     <div class="card">
