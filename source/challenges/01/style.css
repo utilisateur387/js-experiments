@@ -5,7 +5,9 @@ html {
 body,html {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: Helvetica, sans-serif;
+  font-weight: lighter;
+  background: #111111;
 }
 
 .keys {
@@ -17,28 +19,25 @@ body,html {
 }
 
 .key {
-  border: .4rem solid black;
-  border-radius: .5rem;
   margin: 1rem;
   font-size: 1.5rem;
-  padding: 1rem .5rem;
   transition: all .07s ease;
-  width: 10rem;
+  width: 4rem;
   text-align: center;
   color: white;
-  background: rgba(0,0,0,0.4);
-  text-shadow: 0 0 .5rem black;
+  border-radius: 4px;
 }
 
 .playing {
   transform: scale(1.1);
-  border-color: #ffc600;
-  box-shadow: 0 0 1rem #ffc600;
+  border-color: white;
+  /*border: solid 1px;*/
+  box-shadow: 0 0 1rem white;
 }
 
 kbd {
   display: block;
-  font-size: 4rem;
+  font-size: 2.5rem;
 }
 
 .sound {
@@ -49,12 +48,13 @@ kbd {
 }
 
 .animation[data-key="83"] {
-  background: green;
+  background: white;
   width: 100px;
   height: 100px;
   position: fixed;
-  top: 0;
-  -webkit-animation: animateThisA 0.5s ease-out;
+  top: 30%;
+  left: 40%;
+  -webkit-animation: animateThisA 0.4s ease-out;
   -webkit-animation-fill-mode: forwards;
 }
 
@@ -62,12 +62,7 @@ kbd {
 /* ANIMATIONS */
 
 @-webkit-keyframes animateThisA {
-  0% {
-    width: 0px;
-    height: 0px;
-  }
-  100% {
-    width: 200px;
-    height: 200px;
-  }
+  0% { width: 0px; height: 0px; left: 200px;}
+  50% { opacity: 1;}
+  100% { width: 200px; height: 200px; left: 100px; opacity: 0}
 }
