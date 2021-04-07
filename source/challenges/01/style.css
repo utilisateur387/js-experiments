@@ -2,17 +2,18 @@ html {
   font-size: 10px;
 }
 
-body,html {
+body {
   margin: 0;
   padding: 0;
   font-family: Helvetica, sans-serif;
   font-weight: lighter;
   background: #111111;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   height: 100vh;
   text-align: center;
   justify-content: center;
+  margin-top: 32px;
 }
 
 .keys {
@@ -24,7 +25,6 @@ body,html {
 
 .key {
   margin: 1rem;
-  font-size: 1.5rem;
   transition: all .07s ease;
   width: 4rem;
   text-align: center;
@@ -42,7 +42,7 @@ kbd {
   display: block;
   background-color: rgba(255,255,255,0.05);
   border-radius: 6px;
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-family: "Helvetica", sans-serif
 }
 
@@ -89,7 +89,7 @@ kbd {
 .animation[data-key="70"] {
   background: darkblue;
   position: fixed;
-  top: 30%;
+  top: 0;
   left: 40%;
   -webkit-animation: animateThisF 0.4s ease-out;
   -webkit-animation-fill-mode: forwards;
@@ -100,7 +100,6 @@ kbd {
   position: fixed;
   border-radius: 50%;
   top: 60%;
-  left: 20%;
   -webkit-animation: animateThisG 0.4s ease-out;
   -webkit-animation-fill-mode: forwards;
 }
@@ -120,9 +119,7 @@ kbd {
 .animation[data-key="74"] {
   background: white;
   position: fixed;
-  top: 30%;
-  left: 40%;
-  -webkit-animation: animateThisJ 0.4s ease-out;
+  -webkit-animation: animateThisJ 0.8s ease-out;
   -webkit-animation-fill-mode: forwards;
 }
 
@@ -130,8 +127,6 @@ kbd {
   background: rgba(0,0,0,0);
   position: fixed;
   border-radius: 50%;
-  top: 60%;
-  left: 20%;
   -webkit-animation: animateThisK 0.4s ease-out;
   -webkit-animation-fill-mode: forwards;
 }
@@ -151,15 +146,15 @@ kbd {
 
 
 @-webkit-keyframes animateThisA {
-  0% { width: 0px; height: 200px; left: 200px;}
+  0% { width: 0px; height: 200px; left: 10%;}
   50% { opacity: 1;}
-  100% { width: 400px; height: 0px; left: 100px; opacity: 0}
+  100% { width: 1200px; height: 0px; left: 100px; opacity: 0}
 }
 
 @-webkit-keyframes animateThisS {
-  0% { width: 0px; height: 0px; left: 60%; border: solid 16px pink; }
+  0% { width: 0px; height: 0px; left: 30%; border: solid 16px pink; }
   50% { opacity: 1;}
-  100% { width: 200px; height: 200px; left: 60%; opacity: 0;  border: solid 0px pink; }
+  100% { width: 700px; height: 700px; left: 60%; opacity: 0;  border: solid 0px pink; }
 }
 
 @-webkit-keyframes animateThisD {
@@ -168,32 +163,33 @@ kbd {
 }
 
 @-webkit-keyframes animateThisF {
-  0% { width: 0px; height: 200px; left: 200px;}
+  0% { width: 1200px; height: 0px; left: 50%;}
   50% { opacity: 1;}
-  100% { width: 400px; height: 0px; left: 100px; opacity: 0}
+  100% { width: 80px; height: 1500px; left: 60%; opacity: 0}
 }
 
 @-webkit-keyframes animateThisG {
-  0% { width: 0px; height: 0px; left: 60%; border: solid 16px lightblue; }
+  0% { width: 0px; height: 0px; right: 15%; border: solid 46px lightblue; }
   50% { opacity: 1;}
-  100% { width: 200px; height: 200px; left: 60%; opacity: 0;  border: solid 0px lightblue; }
+  100% { width: 600px; height: 600px; right: 20%; opacity: 0;  border: solid 0px lightblue; }
 }
 
 @-webkit-keyframes animateThisH {
   0% { width: 0; height: 0; opacity: 0.8; }
+  90% { opacity: 0.6; }
   100% { width: 100px; height: 100px; left: 50%; top: 50%; opacity: 0; border-radius: 100%; }
 }
 
 @-webkit-keyframes animateThisJ {
-  0% { width: 0px; height: 200px; left: 200px;}
-  50% { opacity: 1;}
-  100% { width: 400px; height: 0px; left: 100px; opacity: 0}
+  0% { top: 0; left: 0; width: 0px; height: 2100vh; }
+  50% { width: 100vw; }
+  100% { left: 100vw; width: 100px }
 }
 
 @-webkit-keyframes animateThisK {
-  0% { width: 0px; height: 0px; left: 60%; border: solid 16px pink; }
+  0% { border: solid 46px yellow; width: 0; height: 0; top: 50vh; left: 50vw; }
   50% { opacity: 1;}
-  100% { width: 200px; height: 200px; left: 60%; opacity: 0;  border: solid 0px pink; }
+  100% { width: 500px; height: 500px; top: 40%; left: 20%; opacity: 0;  border: solid 30px yellow; }
 }
 
 @-webkit-keyframes animateThisL {
