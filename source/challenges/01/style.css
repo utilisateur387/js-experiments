@@ -49,3 +49,28 @@ kbd {
   letter-spacing: .1rem;
   color: #ffc600;
 }
+
+.animation {
+  /*transition: 1s;*/
+  background: tomato;
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  -webkit-animation: animateThisA 0.5s ease-out;
+  -webkit-animation-fill-mode: forwards;
+}
+
+
+/* ANIMATIONS */
+
+@-webkit-keyframes animateThisA {
+  0% {
+    width: 0px;
+    height: 0px;
+  }
+  100% {
+    width: 200px;
+    height: 200px;
+  }
+}
