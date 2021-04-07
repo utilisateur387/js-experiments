@@ -8,14 +8,18 @@ body,html {
   font-family: Helvetica, sans-serif;
   font-weight: lighter;
   background: #111111;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  justify-content: center;
 }
 
 .keys {
   display: flex;
-  flex: 1;
-  min-height: 100vh;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .key {
@@ -30,14 +34,16 @@ body,html {
 
 .playing {
   transform: scale(1.1);
-  border-color: white;
   /*border: solid 1px;*/
-  box-shadow: 0 0 1rem white;
+  /*box-shadow: 0 0 1rem white;*/
 }
 
 kbd {
   display: block;
-  font-size: 2.5rem;
+  background-color: rgba(255,255,255,0.05);
+  border-radius: 6px;
+  font-size: 2rem;
+  font-family: "Helvetica", sans-serif
 }
 
 .sound {
@@ -47,10 +53,10 @@ kbd {
   color: #ffc600;
 }
 
-.animation[data-key="83"] {
+/* ANIMATIONS */
+
+.animation[data-key="65"] {
   background: white;
-  width: 100px;
-  height: 100px;
   position: fixed;
   top: 30%;
   left: 40%;
@@ -58,11 +64,139 @@ kbd {
   -webkit-animation-fill-mode: forwards;
 }
 
+.animation[data-key="83"] {
+  background: rgba(0,0,0,0);
+  position: fixed;
+  border-radius: 50%;
+  top: 60%;
+  left: 20%;
+  -webkit-animation: animateThisS 0.4s ease-out;
+  -webkit-animation-fill-mode: forwards;
+}
 
-/* ANIMATIONS */
+.animation[data-key="68"] {
+  background: salmon;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  /*border-radius: 50%;*/
+  -webkit-animation: animateThisD 0.4s ease-out;
+  -webkit-animation-fill-mode: forwards;
+}
+
+.animation[data-key="70"] {
+  background: white;
+  position: fixed;
+  top: 30%;
+  left: 40%;
+  -webkit-animation: animateThisF 0.4s ease-out;
+  -webkit-animation-fill-mode: forwards;
+}
+
+.animation[data-key="71"] {
+  background: rgba(0,0,0,0);
+  position: fixed;
+  border-radius: 50%;
+  top: 60%;
+  left: 20%;
+  -webkit-animation: animateThisG 0.4s ease-out;
+  -webkit-animation-fill-mode: forwards;
+}
+
+.animation[data-key="72"] {
+  background: salmon;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  /*border-radius: 50%;*/
+  -webkit-animation: animateThisH 0.4s ease-out;
+  -webkit-animation-fill-mode: forwards;
+}
+
+.animation[data-key="74"] {
+  background: white;
+  position: fixed;
+  top: 30%;
+  left: 40%;
+  -webkit-animation: animateThisJ 0.4s ease-out;
+  -webkit-animation-fill-mode: forwards;
+}
+
+.animation[data-key="75"] {
+  background: rgba(0,0,0,0);
+  position: fixed;
+  border-radius: 50%;
+  top: 60%;
+  left: 20%;
+  -webkit-animation: animateThisK 0.4s ease-out;
+  -webkit-animation-fill-mode: forwards;
+}
+
+.animation[data-key="76"] {
+  background: salmon;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  /*border-radius: 50%;*/
+  -webkit-animation: animateThisL 0.4s ease-out;
+  -webkit-animation-fill-mode: forwards;
+}
+
+
 
 @-webkit-keyframes animateThisA {
-  0% { width: 0px; height: 0px; left: 200px;}
+  0% { width: 0px; height: 200px; left: 200px;}
   50% { opacity: 1;}
-  100% { width: 200px; height: 200px; left: 100px; opacity: 0}
+  100% { width: 400px; height: 0px; left: 100px; opacity: 0}
+}
+
+@-webkit-keyframes animateThisS {
+  0% { width: 0px; height: 0px; left: 60%; border: solid 16px pink; }
+  50% { opacity: 1;}
+  100% { width: 200px; height: 200px; left: 60%; opacity: 0;  border: solid 0px pink; }
+}
+
+@-webkit-keyframes animateThisD {
+  0% { border-radius: 0; opacity: 0.8; }
+  100% { width: 0; height: 0; left: 50%; top: 50%; opacity: 0; border-radius: 30%; }
+}
+
+@-webkit-keyframes animateThisF {
+  0% { width: 0px; height: 200px; left: 200px;}
+  50% { opacity: 1;}
+  100% { width: 400px; height: 0px; left: 100px; opacity: 0}
+}
+
+@-webkit-keyframes animateThisG {
+  0% { width: 0px; height: 0px; left: 60%; border: solid 16px pink; }
+  50% { opacity: 1;}
+  100% { width: 200px; height: 200px; left: 60%; opacity: 0;  border: solid 0px pink; }
+}
+
+@-webkit-keyframes animateThisH {
+  0% { border-radius: 0; opacity: 0.8; }
+  100% { width: 0; height: 0; left: 50%; top: 50%; opacity: 0; border-radius: 30%; }
+}
+
+@-webkit-keyframes animateThisJ {
+  0% { width: 0px; height: 200px; left: 200px;}
+  50% { opacity: 1;}
+  100% { width: 400px; height: 0px; left: 100px; opacity: 0}
+}
+
+@-webkit-keyframes animateThisK {
+  0% { width: 0px; height: 0px; left: 60%; border: solid 16px pink; }
+  50% { opacity: 1;}
+  100% { width: 200px; height: 200px; left: 60%; opacity: 0;  border: solid 0px pink; }
+}
+
+@-webkit-keyframes animateThisL {
+  0% { border-radius: 0; opacity: 0.8; }
+  100% { width: 0; height: 0; left: 50%; top: 50%; opacity: 0; border-radius: 30%; }
 }
