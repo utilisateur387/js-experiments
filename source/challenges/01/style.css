@@ -87,7 +87,7 @@ kbd {
 }
 
 .animation[data-key="70"] {
-  background: white;
+  background: darkblue;
   position: fixed;
   top: 30%;
   left: 40%;
@@ -106,7 +106,7 @@ kbd {
 }
 
 .animation[data-key="72"] {
-  background: salmon;
+  background: darkviolet;
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -137,7 +137,7 @@ kbd {
 }
 
 .animation[data-key="76"] {
-  background: salmon;
+  background: cadetblue;
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -163,8 +163,8 @@ kbd {
 }
 
 @-webkit-keyframes animateThisD {
-  0% { border-radius: 0; opacity: 0.8; }
-  100% { width: 0; height: 0; left: 50%; top: 50%; opacity: 0; border-radius: 30%; }
+  0% { opacity: 0.8; }
+  100% { width: 0; height: 0; left: 50%; top: 50%; opacity: 0;}
 }
 
 @-webkit-keyframes animateThisF {
@@ -174,14 +174,14 @@ kbd {
 }
 
 @-webkit-keyframes animateThisG {
-  0% { width: 0px; height: 0px; left: 60%; border: solid 16px pink; }
+  0% { width: 0px; height: 0px; left: 60%; border: solid 16px lightblue; }
   50% { opacity: 1;}
-  100% { width: 200px; height: 200px; left: 60%; opacity: 0;  border: solid 0px pink; }
+  100% { width: 200px; height: 200px; left: 60%; opacity: 0;  border: solid 0px lightblue; }
 }
 
 @-webkit-keyframes animateThisH {
-  0% { border-radius: 0; opacity: 0.8; }
-  100% { width: 0; height: 0; left: 50%; top: 50%; opacity: 0; border-radius: 30%; }
+  0% { width: 0; height: 0; opacity: 0.8; }
+  100% { width: 100px; height: 100px; left: 50%; top: 50%; opacity: 0; border-radius: 100%; }
 }
 
 @-webkit-keyframes animateThisJ {
@@ -197,6 +197,6 @@ kbd {
 }
 
 @-webkit-keyframes animateThisL {
-  0% { border-radius: 0; opacity: 0.8; }
-  100% { width: 0; height: 0; left: 50%; top: 50%; opacity: 0; border-radius: 30%; }
+  0% { opacity: 0.8; }
+  100% { opacity: 0;}
 }
