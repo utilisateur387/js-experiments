@@ -9,6 +9,13 @@
 
   <div data-key="65" id="animation" class="visuals"></div>
   <div data-key="83" id="animation" class="visuals"></div>
+  <div data-key="68" id="animation" class="visuals"></div>
+  <div data-key="70" id="animation" class="visuals"></div>
+  <div data-key="71" id="animation" class="visuals"></div>
+  <div data-key="72" id="animation" class="visuals"></div>
+  <div data-key="74" id="animation" class="visuals"></div>
+  <div data-key="75" id="animation" class="visuals"></div>
+  <div data-key="76" id="animation" class="visuals"></div>
 
   <div class="keys">
     <div data-key="65" class="key">
@@ -66,7 +73,7 @@
     if (keycodes.includes(event.keyCode)) {
       const keycode = event.keyCode;
       const audio = document.querySelector(`audio[data-key="${keycode}"]`);
-      const key = document.querySelector(`div[data-key="${keycode}"]`);
+      const key = document.querySelector(`div.key[data-key="${keycode}"]`);
       const visual = document.querySelector(`.visuals[data-key="${keycode}"]`);
 
       key.classList.add('playing');
@@ -80,7 +87,6 @@
       visual.addEventListener('animationend', () => {
         visual.classList.remove('animation');
       });
-
     }
   });
 </script>

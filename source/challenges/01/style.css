@@ -1,7 +1,5 @@
 html {
   font-size: 10px;
-  background: url('./background.jpg') bottom center;
-  background-size: cover;
 }
 
 body,html {
@@ -50,9 +48,8 @@ kbd {
   color: #ffc600;
 }
 
-.animation {
-  /*transition: 1s;*/
-  background: tomato;
+.animation[data-key="83"] {
+  background: green;
   width: 100px;
   height: 100px;
   position: fixed;
