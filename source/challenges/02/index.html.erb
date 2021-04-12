@@ -23,13 +23,13 @@
   const hours = now.getHours();
 
   const secondHand = document.querySelector('.second-hand');
-  secondHand.style.transform = `rotate(${seconds * 6 - 90}deg)`;
+  secondHand.style.transform = `rotate(${seconds * 6 + 270}deg)`;
 
-  const secondHand = document.querySelector('.second-hand');
-  secondHand.style.transform = `rotate(${seconds * 6 - 90}deg)`;
+  const minuteHand = document.querySelector('.minute-hand');
+  minuteHand.style.transform = `rotate(${minutes * 6 - 90}deg)`;
 
-  const secondHand = document.querySelector('.second-hand');
-  secondHand.style.transform = `rotate(${seconds * 6 - 90}deg)`;
+  const hourHand = document.querySelector('.hour-hand');
+  hourHand.style.transform = `rotate(${hours * 6 - 90}deg)`;
  }
 
  setInterval(setDate, 1000);

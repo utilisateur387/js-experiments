@@ -32,3 +32,11 @@ body {
   transition: 200ms;
   transition-timing-function: cubic-bezier(0.13, 1.76, 0.4, 1.01);
 }
+
+.second-hand {
+  background: blue;
+}
+
+.hour-hand {
+  width: 30%;
+}
