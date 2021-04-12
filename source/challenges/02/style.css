@@ -17,8 +17,18 @@ body {
   border: solid 2px white;
   height: 100%;
   width: 100%;
+  position: relative;
 }
 
 .hand {
-  width: 90px;
+  width: 49%;
+  height: 2px;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: 0%;
+  transform: rotate(-90deg);
+  transition: 200ms;
+  transition-timing-function: cubic-bezier(0.13, 1.76, 0.4, 1.01);
 }

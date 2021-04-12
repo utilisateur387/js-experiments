@@ -16,6 +16,23 @@
 </div>
 
 <script>
+ const setDate = () => {
+  const now = new Date();
+  const seconds = now.getSeconds();
+  const minutes = now.getMinutes();
+  const hours = now.getHours();
+
+  const secondHand = document.querySelector('.second-hand');
+  secondHand.style.transform = `rotate(${seconds * 6 - 90}deg)`;
+
+  const secondHand = document.querySelector('.second-hand');
+  secondHand.style.transform = `rotate(${seconds * 6 - 90}deg)`;
+
+  const secondHand = document.querySelector('.second-hand');
+  secondHand.style.transform = `rotate(${seconds * 6 - 90}deg)`;
+ }
+
+ setInterval(setDate, 1000);
 
 
 </script>
