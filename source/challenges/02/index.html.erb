@@ -24,15 +24,18 @@
 
   const secondHand = document.querySelector('.second-hand');
   const secondDegrees = seconds * 360 / 60 + 270;
+  if (secondDegrees === 624) { secondHand.style.transition = 'none' }
   secondHand.style.transform = `rotate(${secondDegrees}deg)`;
 
   const minuteDegrees = minutes * 360 / 60 + 270;
   const minuteHand = document.querySelector('.minute-hand');
+  if (minuteDegrees === 2040) { minuteHand.style.transition = 'none' }
   minuteHand.style.transform = `rotate(${minuteDegrees}deg)`;
 
-  const hoursDegrees = hours * 360 / 12 + 270;
+  const hourDegrees = hours * 360 / 12 + 270;
   const hourHand = document.querySelector('.hour-hand');
-  hourHand.style.transform = `rotate(${hoursDegrees}deg)`;
+  if (hourDegrees === 600 || hourDegrees === 960) { hourHand.style.transition = 'none' }
+  hourHand.style.transform = `rotate(${hourDegrees}deg)`;
  }
 
  setInterval(setDate, 1000);
