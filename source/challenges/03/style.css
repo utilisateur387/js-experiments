@@ -5,14 +5,19 @@
 
   --base-color: #ECE5D4;
   --color1: #0000FF;
-  --color2: #1D9261;
+  --color2: #F05C23;
   --color3: #131A18;
   --color4: #F9A11D;
-  --color5: #F05C23;
+}
+
+body {
+  background: #F5F4F2;
+  text-align: center;
 }
 
 h1 {
-  color: var(--base-color);
+  color: black;
+  font-size: 4rem;
 }
 
 .container-image {
@@ -24,6 +29,17 @@ h1 {
 .container-image svg {
   background: var(--base-color);
   max-width: 100%;
+  border-radius: 6px;
   filter: contrast(var(--contrast)) brightness(var(--brightness));
   /*filter: blur(var(--blur));*/
+}
+
+label {
+  color: black;
+  display: block;
+}
+
+.container-colors {
+  display: flex;
+  justify-content: center;
 }
