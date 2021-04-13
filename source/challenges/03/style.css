@@ -21,8 +21,8 @@ h1 {
 }
 
 .container-image svg {
+  background: var(--base-color);
   max-width: 100%;
   filter: contrast(var(--contrast)) brightness(var(--brightness));
-/*  filter: brightness(var(--brightness));
-  filter: blur(var(--blur));*/
+  /*filter: blur(var(--blur));*/
 }
