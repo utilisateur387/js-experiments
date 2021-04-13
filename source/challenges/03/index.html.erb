@@ -9,12 +9,12 @@
   <h1>Update variables</h1>
   <div>
     <label for="contrast">Contrast</label>
-    <input name="contrast" type="range" min="0" max="25" value="0">
+    <input name="contrast" type="range" min="0" max="25" value="0" data-sizing="px" >
   </div>
 
   <div>
     <label for="blur">Blur</label>
-    <input name="blur" type="range" min="0" max="25" value="0">
+    <input name="blur" type="range" min="0" max="25" value="0" data-sizing="px" >
   </div>
 
   <div>
@@ -64,7 +64,18 @@
   </div>
 
 <script>
+  const inputs = document.querySelectorAll('input');
 
+  function handleUpdate() {
+    console.log(this.value);
+    console.log(this.dataset);
+    // const suffix = this.dataset.sizing;
+  };
+
+  inputs.forEach((input) => {
+    input.addEventListener('change', handleUpdate)
+    // input.addEventListener('mousemove', handleUpdate)
+  })
 </script>
 
 </body>
