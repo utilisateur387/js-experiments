@@ -1,1 +1,10 @@
-style.css
+:root {
+  --base-color: #f5de00;
+  --spacing: 30px;
+  --blur: 10px;
+}
+
+h1 {
+  color: var(--base-color);
+}
+
