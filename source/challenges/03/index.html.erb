@@ -9,12 +9,12 @@
   <h1>Update variables</h1>
   <div>
     <label for="contrast">Contrast</label>
-    <input name="contrast" type="range" min="0" max="25" value="0" data-sizing="px" >
+    <input name="contrast" type="range" min="0" max="250" value="100" data-sizing="%" >
   </div>
 
   <div>
-    <label for="blur">Blur</label>
-    <input name="blur" type="range" min="0" max="25" value="0" data-sizing="px" >
+    <label for="brightness">Brightness</label>
+    <input name="brightness" type="range" min="0" max="250" value="100" data-sizing="%" >
   </div>
 
   <div>
@@ -68,9 +68,8 @@
 
   function handleUpdate() {
     const suffix = this.dataset.sizing || "";
-    // console.log(this.name);
-
-    document.documentElement.style.setProperty(`--${this.name}`, this.value)
+    console.log(this.name);
+    document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix)
   };
 
   inputs.forEach((input) => {

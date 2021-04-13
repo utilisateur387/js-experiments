@@ -1,10 +1,13 @@
 :root {
-  --contrast: 150%;
+  --contrast: 100%;
   --blur: 10px;
-  --brightness: 140%;
+  --brightness: 100%;
 
   --base-color: #ECE5D4;
   --color1: blue;
+  --color2: blue;
+  --color3: blue;
+  --color4: blue;
 }
 
 h1 {
@@ -19,7 +22,7 @@ h1 {
 
 .container-image svg {
   max-width: 100%;
-  filter: contrast(var(--contrast));
-  filter: brightness(var(--brightness));
-  /*filter: blur(var(--blur));*/
+  filter: contrast(var(--contrast)) brightness(var(--brightness));
+/*  filter: brightness(var(--brightness));
+  filter: blur(var(--blur));*/
 }
