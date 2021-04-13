@@ -1,10 +1,25 @@
 :root {
-  --base-color: #f5de00;
-  --spacing: 30px;
+  --contrast: 150%;
   --blur: 10px;
+  --brightness: 140%;
+
+  --base-color: #ECE5D4;
+  --color1: blue;
 }
 
 h1 {
   color: var(--base-color);
 }
 
+.container-image {
+  width: 100%;
+  object-fit: cover;
+  text-align: center;
+}
+
+.container-image svg {
+  max-width: 100%;
+  filter: contrast(var(--contrast));
+  filter: brightness(var(--brightness));
+  /*filter: blur(var(--blur));*/
+}
