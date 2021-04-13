@@ -4,10 +4,11 @@
   --brightness: 100%;
 
   --base-color: #ECE5D4;
-  --color1: blue;
-  --color2: blue;
-  --color3: blue;
-  --color4: blue;
+  --color1: #0000FF;
+  --color2: #1D9261;
+  --color3: #131A18;
+  --color4: #F9A11D;
+  --color5: #F05C23;
 }
 
 h1 {
