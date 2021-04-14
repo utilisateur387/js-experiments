@@ -49,5 +49,7 @@ page '/challenges/*', layout: "challenges_layout"
 
 activate :livereload
 activate :directory_indexes
-activate :relative_assets
-set :relative_links, true
+
+# Middleman deployment to GH pages settings
+# activate :relative_assets
+# set :relative_links, true
