@@ -68,11 +68,20 @@
     // 7. sort Exercise
     // Sort the people alphabetically by last name
     people.sort();
-    console.log(people);
+    // console.log(people);
 
     // 8. Reduce Exercise
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
+    const sum = data.reduce(function (accumulator, transportMode) {
+      if (!accumulator[transportMode]) {
+        accumulator[transportMode] = 1;
+      } else {
+        accumulator[transportMode]++;
+      }
+      return accumulator
+    }, {})
+    console.log(sum)
 
   </script>
 </body>
