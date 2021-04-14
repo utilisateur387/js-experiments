@@ -37,5 +37,25 @@ hr {
   position: fixed;
   top: 0;
   left: 0;
-  padding: 16px;
+  margin: 10px;
+  padding: 0 4px;
+  background: rgba(255,255,255,0.3);
+  font-family: $headers-font;
+  font-size: 16px;
+  font-weight: 100;
+  border-radius: 4px;
+  transition: 80ms;
+
+  &:hover {
+    background-color: orange;
+  }
+  a {
+    color: black;
+  }
+  a:hover {
+    color: black;
+  }
+  a:active {
+    color: black;
+  }
 }
