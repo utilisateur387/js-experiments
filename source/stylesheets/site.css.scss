@@ -11,10 +11,11 @@ body {
 
 a {
   color: white;
+  text-decoration: none;
 
   &:focus,
   &:hover {
-    color: rgba(#000, 0.6);
+    color: blue
   }
 }
 
