@@ -22,6 +22,11 @@ a {
 
 .intro {
   max-width: 776px;
+
+  p {
+    font-family: $headers-font;
+    font-weight: 100;
+  }
 }
 
 hr {
