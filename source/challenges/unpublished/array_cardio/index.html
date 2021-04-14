@@ -38,37 +38,44 @@
     // Array.prototype.filter()
     // 1. Filter the list of inventors for those who were born in the 1500's
     const bornPast1500 = inventors.filter(inventor => inventor.year >= 1500 && inventor.year < 1600)
-    // console.log(bornPast1500);
+    console.table(bornPast1500);
 
     // Array.prototype.map()
     // 2. Give us an array of the inventors first and last names
     const fullNames = inventors.map(inventor => inventor.first + " " + inventor.last);
-    // console.log(fullNames);
+    console.table(fullNames);
 
     // Array.prototype.sort()
     // 3. Sort the inventors by birthdate, oldest to youngest
-    inventors.sort((a, b) => a.year - b.year);
-    // console.log(inventors);
+    const ordered = inventors.sort((a, b) => a.year - b.year); // will return 1 or -1 depending on the comparison
+    console.table(ordered);
+
+    // If we were to sort by first name alphabetically
+    // const ordered = inventors.sort((a, b) => a.first > b.first ? 1 : -1);
 
     // Array.prototype.reduce()
     // 4. How many years did all the inventors live all together?
-    let yearTotal = inventors.reduce((accumulator, currentValue) => {
-      return accumulator + currentValue.year
+    const yearTotal = inventors.reduce((accumulator, currentValue) => {
+      return accumulator + (currentValue.passed - currentValue.year)
     }, 0);
-    // console.log(yearTotal);
+    console.log(yearTotal);
 
     // 5. Sort the inventors by years lived
-    inventors.sort((a, b) => (a.passed - a.year) - (b.passed - b.year));
-    // console.log(inventors);
+    inventors.sort((a, b) => (a.passed - a.year) > (b.passed - b.year) ? 1 : -1);
+    console.table(inventors);
 
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
     // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
-
+    // const category = document.querySelector('.mw-category');
+    // const links = Array.from(category.querySelectorAll('a'));
+    // const list = links
+    //     .map(link => link.textContent)
+    //     .filter(address => address.includes(" de"));
+    // console.log(list);
 
     // 7. sort Exercise
     // Sort the people alphabetically by last name
-    people.sort();
-    // console.log(people);
+    console.table(people.sort());
 
     // 8. Reduce Exercise
     // Sum up the instances of each of these
@@ -81,7 +88,7 @@
       }
       return accumulator
     }, {})
-    console.log(sum)
+    console.table(sum)
 
   </script>
 </body>
