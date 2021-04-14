@@ -25,6 +25,11 @@ title: JS30
       <% link_to "challenges/0#{index + 1}/index.html" do %>
         <h4><%= day %></h4>
         <div class="my-card">
+          <% if File.exist?("source/challenges/0#{index + 1}/images/cover.gif") %>
+            <img src="challenges/0<%= index + 1 %>/images/cover.gif" class="gif-bg" alt="" >
+          <% else %>
+            <img src="challenges/0<%= index + 1 %>/images/cover.png" alt="">
+          <% end %>
         </div>
       <% end %>
     </div>
