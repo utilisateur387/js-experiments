@@ -12,6 +12,8 @@ end
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
+page '/challenges/*', layout: "challenges_layout"
+
 
 # With alternative layout
 # page '/path/to/file.html', layout: 'other_layout'
