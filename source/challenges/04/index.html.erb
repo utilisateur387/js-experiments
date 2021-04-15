@@ -2,14 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Variables</title>
+  <title>Panels</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="panels">
+    <div class="panel panel1">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+    <div class="panel panel2">
+      Hello
+    </div>
+    <div class="panel panel3">
+      Hello
+    </div>
+    <div class="panel panel4">
+      Hello
+    </div>
+    <div class="panel panel5">
+      Hello
+    </div>
+  </div>
 
 
 <script>
-
+  const panels = document.querySelectorAll('.panel');
+  panels.forEach((panel) => {
+    panel.addEventListener('mouseover', (e) => {
+      panel.classList.add('panel-active');
+    })
+    panel.addEventListener('mouseout', (e) => {
+      panel.classList.remove('panel-active');
+    })
+  })
 </script>
 
 </body>

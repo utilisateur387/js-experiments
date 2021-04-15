@@ -1,1 +1,41 @@
-style.css
+body {
+  padding: 0;
+}
+
+.panels {
+  display: flex;
+  flex-direction: row;
+}
+
+.panel {
+  background: red;
+  flex: 1;
+  min-height: 100vh;
+  text-align: center;
+  transition: 300ms;
+  overflow: hidden;
+}
+
+.panel-active {
+/*  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;*/
+  /*background: blue;*/
+  flex: 3;
+  font-size: 42px;
+  transition: 300ms;
+}
+
+.panel-active .circle {
+  height: 33.33%;
+}
+
+.circle {
+  transition: 300ms;
+  width: 100%;
+  height: 100%;
+  border: solid 2px white;
+  border-radius: 50%;
+
+}
