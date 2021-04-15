@@ -11,32 +11,57 @@
       <div class="circle"></div>
       <div class="circle"></div>
       <div class="circle"></div>
+      <div class="circle"></div>
     </div>
     <div class="panel panel2">
-      Hello
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
     </div>
     <div class="panel panel3">
-      Hello
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
     </div>
     <div class="panel panel4">
-      Hello
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
     </div>
     <div class="panel panel5">
-      Hello
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
     </div>
   </div>
 
 
 <script>
-  const panels = document.querySelectorAll('.panel');
-  panels.forEach((panel) => {
-    panel.addEventListener('mouseover', (e) => {
-      panel.classList.add('panel-active');
+  const circles = document.querySelectorAll('.circle');
+  circles.forEach((circle) => {
+    circle.addEventListener('mouseover', (e) => {
+      circle.classList.add('circle-active');
     })
-    panel.addEventListener('mouseout', (e) => {
-      panel.classList.remove('panel-active');
+    circle.addEventListener('mouseout', (e) => {
+      circle.classList.remove('circle-active');
+    })
+    circle.addEventListener('click', (e) => {
+      circle.classList.remove('circle-active');
     })
   })
+  // const panels = document.querySelectorAll('.panel');
+  // panels.forEach((panel) => {
+  //   panel.addEventListener('mouseover', (e) => {
+  //     panel.classList.add('panel-active');
+  //   })
+  //   panel.addEventListener('mouseout', (e) => {
+  //     panel.classList.remove('panel-active');
+  //   })
+  // })
 </script>
 
 </body>
