@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Panels</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="panels">
+    <div class="panel panel1">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+    <div class="panel panel2">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+    <div class="panel panel3">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+    <div class="panel panel4">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+    <div class="panel panel5">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+  </div>
+
+
+<script>
+  const circles = document.querySelectorAll('.circle');
+  circles.forEach((circle) => {
+    circle.addEventListener('mouseover', (e) => {
+      circle.classList.add('circle-active');
+    })
+    circle.addEventListener('mouseout', (e) => {
+      circle.classList.remove('circle-active');
+    })
+    circle.addEventListener('click', (e) => {
+      circle.classList.remove('circle-active');
+    })
+  })
+  // const panels = document.querySelectorAll('.panel');
+  // panels.forEach((panel) => {
+  //   panel.addEventListener('mouseover', (e) => {
+  //     panel.classList.add('panel-active');
+  //   })
+  //   panel.addEventListener('mouseout', (e) => {
+  //     panel.classList.remove('panel-active');
+  //   })
+  // })
+</script>
+
+</body>
+</html>
