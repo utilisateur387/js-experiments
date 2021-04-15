@@ -8,60 +8,62 @@
 <body>
   <div class="panels">
     <div class="panel panel1">
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
+      <div class="circle" data-index="1"></div>
+      <div class="circle" data-index="2"></div>
+      <div class="circle" data-index="3"></div>
+      <div class="circle" data-index="4"></div>
     </div>
     <div class="panel panel2">
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
+      <div class="circle" data-index="5"></div>
+      <div class="circle" data-index="6"></div>
+      <div class="circle" data-index="7"></div>
+      <div class="circle" data-index="8"></div>
     </div>
     <div class="panel panel3">
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
+      <div class="circle" data-index="9"></div>
+      <div class="circle" data-index="10"></div>
+      <div class="circle" data-index="11"></div>
+      <div class="circle" data-index="12"></div>
     </div>
     <div class="panel panel4">
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
+      <div class="circle" data-index="13"></div>
+      <div class="circle" data-index="14"></div>
+      <div class="circle" data-index="15"></div>
+      <div class="circle" data-index="16"></div>
     </div>
     <div class="panel panel5">
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
+      <div class="circle" data-index="17"></div>
+      <div class="circle" data-index="18"></div>
+      <div class="circle" data-index="19"></div>
+      <div class="circle" data-index="20"></div>
     </div>
   </div>
 
 
 <script>
   const circles = document.querySelectorAll('.circle');
+
+  function toggleActive() {
+    this.classList.toggle('circle-active');
+    checkClass();
+  };
+
+  function checkClass() {
+    const totalActive = Array.from(circles).reduce(function(total, circle) {
+      if (circle.className.includes('active')) {
+        total++
+      }
+      return total
+    }, 0)
+    if (totalActive === circles.length) {
+      setTimeout(function(){ alert("Congratulations!"); }, 150);
+    }
+  }
+
   circles.forEach((circle) => {
-    circle.addEventListener('mouseover', (e) => {
-      circle.classList.add('circle-active');
-    })
-    circle.addEventListener('mouseout', (e) => {
-      circle.classList.remove('circle-active');
-    })
-    circle.addEventListener('click', (e) => {
-      circle.classList.remove('circle-active');
-    })
-  })
-  // const panels = document.querySelectorAll('.panel');
-  // panels.forEach((panel) => {
-  //   panel.addEventListener('mouseover', (e) => {
-  //     panel.classList.add('panel-active');
-  //   })
-  //   panel.addEventListener('mouseout', (e) => {
-  //     panel.classList.remove('panel-active');
-  //   })
-  // })
+    circle.addEventListener('mouseover', toggleActive);
+  });
+
 </script>
 
 </body>

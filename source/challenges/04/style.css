@@ -19,14 +19,6 @@ body {
   justify-content: center;
   flex-direction: column;
 }
-/*
-.panel-active {
-  background: blue;
-  flex: 3;
-  font-size: 42px;
-  transition: 400ms ease;
-  height: 100%;
-}*/
 
 .circle {
   transition: 200ms ease;
@@ -35,12 +27,12 @@ body {
   border: solid 2px white;
   border-radius: 50%;
   flex: 1;
+  background-position: center;
 }
 
 .circle-active {
   flex: 4;
-  border: solid 2px rgba(0,0,0,0);
-  background: white;
-  border-radius: 10px;
-
+  border: solid 8px darkslategray;
+  border-radius: 32px;
+  background: cadetblue;
 }
