@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>AJAX</title>
-  <!-- <link rel="stylesheet" href="style.css"> -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -32,14 +32,17 @@
   }
 
   function displayMatches() {
-    console.log(this.value);
-    const matches = findMatches(this.value, cities);
     const suggestions = document.querySelector('.suggestions');
-    suggestions.innerHTML = '';
-    matches.forEach((match) => {
-      console.log(match);
-      suggestions.insertAdjacentHTML('beforeend', `<li>${match.city}</li>`);
-    })
+    const matches = findMatches(this.value, cities);
+    const html = matches.map((match) => {
+      return `
+        <li>
+          <span class="name">${match.city}, ${match.state}</span>
+          <span class="population">${match.population}</span>
+        </li>`
+    });
+
+    suggestions.innerHTML = html.join('');
   }
 
   const searchInput = document.querySelector('.search');
